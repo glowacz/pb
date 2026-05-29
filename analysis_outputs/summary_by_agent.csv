@@ -1,0 +1,6 @@
+agent,n,merge_rate,median_loc_changed,median_commits,median_review_cmts
+OpenAI_Codex,21799,0.826,74.0,1.0,0.0
+Copilot,4970,0.43,179.0,3.0,0.0
+Devin,4827,0.538,166.0,3.0,0.0
+Cursor,1541,0.652,271.0,2.0,0.0
+Claude_Code,459,0.59,687.0,3.0,0.0
