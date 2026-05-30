@@ -59,16 +59,16 @@ więcej commitów towarzyszy gorszym PR-om, ale gdy odfiltrujemy rozmiar i agent
 sam fakt iterowania commitami pomaga PR-owi przejść — dobra ilustracja, **po co
 modele wielowymiarowe**.
 
-**2. Większy PR = więcej tarcia, niższa akceptacja.** Więcej dodanych linii
+**2. Większy PR = więcej oporu przy ocenie, niższa akceptacja.** Więcej dodanych linii
 obniża szansę mergowania (OR ≈ 0,79) i spowalnia merge (HR ≈ 0,91), a podnosi
 liczbę komentarzy (IRR ≈ 1,31) i żądanych zmian (IRR ≈ 1,38). Rozłożenie zmian na
 **więcej plików** za to *zmniejsza* liczbę żądanych zmian (IRR ≈ 0,82, p < 0,001).
 
-**3. Typ zadania ma znaczenie dla akceptacji.** Wskaźnik mergowania waha się od
-**0,84 dla `docs`** do 0,55 (`perf`) i 0,32 (`other`); `fix`/`feat` ~0,65–0,71.
-W modelu `docs` ma najwyższą szansę mergowania, a `perf`, `fix` i `feat` niższą
-(względem `build`). PR-y `docs` i `chore` ściągają jednak więcej komentarzy
-inline (IRR ≈ 1,8 i 1,6).
+**3. Typ zadania ma realne znaczenie dla akceptacji.** Wskaźnik mergowania waha
+się od **0,84 dla `docs`** do 0,55 (`perf`) i 0,32 (`other`); `fix`/`feat`
+~0,65–0,71. W modelu `docs` ma najwyższą szansę mergowania, a `perf`, `fix` i
+`feat` niższą (względem `build`).
+PR-y `docs` i `chore` ściągają przy tym więcej komentarzy inline (IRR ≈ 1,8 i 1,6).
 
 **4. Powiązanie z issue nie zwiększa akceptacji.** Wbrew intuicji nie wpływa na
 szansę mergowania (OR ≈ 1,01, nieistotne), za to wiąże się z *wolniejszym*
@@ -81,11 +81,16 @@ Copilot tylko 43% i generuje **wielokrotnie więcej żądanych zmian**
 (IRR ≈ 7,2 vs baza), Devin podobnie (IRR ≈ 3,3). Mniejsze, prostsze PR-y idą w
 parze z lepszymi wynikami.
 
-> **Wniosek:** jakość PR-a agentowego najbardziej zależy od **rozmiaru zmiany i
-> granularności commitów**, w mniejszym stopniu od typu zadania. Mniejsze PR-y
-> częściej i szybciej się mergują; drobne commity zwiększają szansę akceptacji,
-> ale kosztem dłuższego i intensywniejszego review. Powiązanie z issue ani typ
-> zadania nie są same w sobie gwarancją jakości.
+> **Wniosek:** **Typ zadania, rozmiar zmiany i granularność commitów** wszystkie mają
+> wkład w jakość PRa. 
+> Niska Cramér's V typu zadania (0,14, formalnie „mała") nie oznacza więc,
+> że typ jest nieistotny — to artefakt miary przy wyniku binarnym,
+> w którym większość PR-ów to `feat`/`fix` blisko średniej; w
+> regresji efekt `docs` vs `perf` jest realny i istotny. Praktycznie: mniejsze
+> PR-y mergują się częściej i szybciej; bardziej rozdrobnione (granularne) commity zwiększają szansę
+> akceptacji kosztem dłuższego review; `docs` są akceptowane najchętniej,
+> `fix`/`perf` najrzadziej. Powiązanie z issue nie jest samo w sobie gwarancją
+> jakości.
 
 ## Struktura wyników
 
