@@ -7,6 +7,7 @@ jakością PR-ów agentowych?*
 
 Cała analiza jest w [analysis.ipynb](analysis.ipynb), a wyniki liczbowe w
 [analysis_outputs/](analysis_outputs/).
+Skrypt tworzyący jedną, zdenormalizowaną tabelę, używaną do analizy, jest w pliku [aidev_pop_pr_features.parquet](aidev_pop_pr_features.parquet).
 
 ## Co badamy
 
